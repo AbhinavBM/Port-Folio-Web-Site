@@ -69,15 +69,24 @@ const DevFolio: React.FC = () => {
                 throw new Error('Please enter a valid email address');
             }
 
-            // Create mailto link with form data
-            const subject = encodeURIComponent(formData.subject);
-            const body = encodeURIComponent(
-                `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-            );
-            const mailtoLink = `mailto:abhinavankole06@gmail.com?subject=${subject}&body=${body}`;
+            // Use Formspree for email sending (free service)
+            const response = await fetch('https://formspree.io/f/xgvzeyvy', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                    _replyto: formData.email,
+                }),
+            });
 
-            // Open email client
-            window.location.href = mailtoLink;
+            if (!response.ok) {
+                throw new Error('Failed to send message');
+            }
 
             // Reset form and show success
             setFormData({ name: '', email: '', subject: '', message: '' });
@@ -166,41 +175,53 @@ const DevFolio: React.FC = () => {
                 </div>
             </nav>
 
-            {/* Hero Section */}
-            <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-                <div
-                    className="absolute inset-0 bg-cover bg-no-repeat"
-                    style={{
-                        backgroundImage: `url('https://i.imghippo.com/files/YDb3291EU.jpeg')`,
-                        filter: 'brightness(0.7) contrast(1.1)',
-                        backgroundPosition: 'center 40%',
-                        transform: 'scale(0.9)'
-                    }}
-                />
-                <div className="absolute inset-0 bg-black/40" />
-                <div className="relative z-10 text-center px-6">
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-4 leading-tight tracking-tight">
+            <section
+                id="home"
+                className="min-h-screen flex flex-col md:flex-row items-center justify-center relative px-6 bg-black"
+            >
+                {/* Left: Text */}
+                <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left py-12 md:py-0 md:pl-[10%] md:ml-[5%] max-w-[500px] z-10 relative">
+                    <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight tracking-tight whitespace-nowrap">
                         I am Abhinav B M
                     </h1>
-                    <p className="text-2xl md:text-3xl lg:text-4xl text-white font-light tracking-wide mb-8">
+                    <p className="text-xl md:text-3xl lg:text-4xl text-white font-light tracking-wide mb-8">
                         Software Development Engineer
                     </p>
-                    <div className="flex justify-center space-x-6">
+                    <div className="flex justify-center md:justify-start space-x-6">
                         <button
-                            onClick={() => scrollToSection('portfolio')}
-                            className="bg-white text-black px-8 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+                            onClick={() => scrollToSection("portfolio")}
+                            className="bg-white text-black px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors font-medium"
                         >
                             View My Work
                         </button>
                         <button
-                            onClick={() => scrollToSection('contact')}
-                            className="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-white hover:text-black transition-colors font-medium"
+                            onClick={() => scrollToSection("contact")}
+                            className="border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition-colors font-medium"
                         >
                             Get In Touch
                         </button>
                     </div>
                 </div>
+
+                {/* Right: Image */}
+                <div className="w-full md:w-1/2 flex justify-center md:justify-end md:pr-12 relative z-0">
+                    <img
+                        src="https://i.imghippo.com/files/GVsZ2749Eg.jpeg"
+                        alt="Abhinav B M"
+                        className="w-auto max-h-[50vh] md:max-h-[90vh] object-contain rounded-lg shadow-lg scale-115"
+                    />
+                </div>
             </section>
+
+
+
+
+
+
+
+
+
+
 
             {/* About Section */}
             <section id="about" className="py-20 bg-gray-900">
