@@ -8,10 +8,10 @@ export { default as Portfolio } from './Portfolio/Portfolio';
 export { default as Contact } from './Contact/Contact';
 export { default as Footer } from './Footer/Footer';
 
-// Portfolio sub-components
-export { default as ExperienceCard } from './Portfolio/ExperienceCard';
-export { default as ProjectCard } from './Portfolio/ProjectCard';
+// Portfolio sub-components (these are named exports, not default exports)
+export { ExperienceCard } from './Portfolio/ExperienceCard';
+export { ProjectCard } from './Portfolio/ProjectCard';
 
 // Contact sub-components
-export { default as ContactForm } from './Contact/ContactForm';
-export { default as ContactInfo } from './Contact/ContactInfo';
+export { ContactForm } from './Contact/ContactForm';
+export { ContactInfo } from './Contact/ContactInfo';
