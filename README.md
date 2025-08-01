@@ -15,10 +15,10 @@ A modern, responsive portfolio website showcasing my work as a Software Developm
   - About: Personal background and skills
   - Services: Professional services offered
   - Portfolio: Showcase of projects and work
-  - Contact: Functional contact form with EmailJS integration
+  - Contact: Functional contact form with Formspree integration
 - **Modern UI/UX**: Clean, dark theme with professional aesthetics
 - **Active Section Tracking**: Navigation highlights current section
-- **Contact Form**: Direct email functionality using EmailJS
+- **Contact Form**: Direct email functionality using Formspree
 - **Mobile Navigation**: Responsive dropdown menu for mobile devices
 
 ## 🛠️ Tech Stack
@@ -27,7 +27,7 @@ A modern, responsive portfolio website showcasing my work as a Software Developm
 - **Styling**: Tailwind CSS 4.1.11
 - **Build Tool**: Vite
 - **Icons**: Lucide React
-- **Email Service**: EmailJS
+- **Email Service**: Formspree
 - **Package Manager**: Yarn
 - **Linting**: ESLint with TypeScript support
 
@@ -69,10 +69,10 @@ Port-Folio-Web-Site/
    yarn install
    ```
 
-3. **Set up EmailJS (for contact form)**
-   - Create an account at [EmailJS](https://www.emailjs.com/)
-   - Create an email service and template
-   - Update the EmailJS configuration in `DevFolio.tsx`
+3. **Set up Formspree (for contact form)**
+   - Create an account at [Formspree](https://formspree.io/)
+   - Create a form and get the form ID
+   - Update the Formspree configuration in `DevFolio.tsx`
 
 4. **Start the development server**
    ```bash
@@ -105,12 +105,10 @@ Update the following in `src/DevFolio.tsx`:
 - Component styles are handled with Tailwind CSS classes
 
 ### Contact Form
-Configure EmailJS in the `handleSubmit` function:
+Configure Formspree in the `handleSubmit` function:
 ```typescript
-// Update these with your EmailJS credentials
-const serviceId = 'your_service_id';
-const templateId = 'your_template_id';
-const publicKey = 'your_public_key';
+// Update this with your Formspree form ID
+const formId = 'your_form_id';
 ```
 
 ## 🚀 Deployment
@@ -166,7 +164,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with [Vite](https://vitejs.dev/)
 - Styled with [Tailwind CSS](https://tailwindcss.com/)
 - Icons from [Lucide React](https://lucide.dev/)
-- Email functionality by [EmailJS](https://www.emailjs.com/)
+- Email functionality by [Formspree](https://formspree.io/)
 
 ---
 

@@ -1,4 +1,4 @@
-import DevFolio from './DevFolio';
+import DevFolio from './components/DevFolio';
 
 function App() {
   return (
