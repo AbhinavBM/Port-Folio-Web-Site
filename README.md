@@ -1,69 +1,173 @@
-# React + TypeScript + Vite
+# Abhinav B M - Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website showcasing my work as a Software Development Engineer. Built with React, TypeScript, and Tailwind CSS for a sleek, professional presentation.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[View Live Portfolio](https://abhinavbm.vercel.app/)
 
-## Expanding the ESLint configuration
+## 📋 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Responsive Design**: Optimized for all devices (mobile, tablet, desktop)
+- **Smooth Scrolling Navigation**: Seamless single-page application experience
+- **Interactive Sections**:
+  - Home: Professional introduction and call-to-action
+  - About: Personal background and skills
+  - Services: Professional services offered
+  - Portfolio: Showcase of projects and work
+  - Contact: Functional contact form with EmailJS integration
+- **Modern UI/UX**: Clean, dark theme with professional aesthetics
+- **Active Section Tracking**: Navigation highlights current section
+- **Contact Form**: Direct email functionality using EmailJS
+- **Mobile Navigation**: Responsive dropdown menu for mobile devices
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend**: React 19.1.0 with TypeScript
+- **Styling**: Tailwind CSS 4.1.11
+- **Build Tool**: Vite
+- **Icons**: Lucide React
+- **Email Service**: EmailJS
+- **Package Manager**: Yarn
+- **Linting**: ESLint with TypeScript support
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Project Structure
+
+```
+Port-Folio-Web-Site/
+├── src/
+│   ├── DevFolio.tsx      # Main portfolio component
+│   ├── App.tsx           # Root component
+│   ├── main.tsx          # Application entry point
+│   ├── index.css         # Global styles
+│   └── assets/           # Static assets
+├── public/               # Public assets
+├── package.json          # Dependencies and scripts
+├── tailwind.config.js    # Tailwind CSS configuration
+├── postcss.config.js     # PostCSS configuration
+├── vite.config.ts        # Vite configuration
+└── tsconfig.json         # TypeScript configuration
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (version 16 or higher)
+- Yarn package manager
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/AbhinavBM/Port-Folio-Web-Site.git
+   cd Port-Folio-Web-Site
+   ```
+
+2. **Install dependencies**
+   ```bash
+   yarn install
+   ```
+
+3. **Set up EmailJS (for contact form)**
+   - Create an account at [EmailJS](https://www.emailjs.com/)
+   - Create an email service and template
+   - Update the EmailJS configuration in `DevFolio.tsx`
+
+4. **Start the development server**
+   ```bash
+   yarn dev
+   ```
+
+5. **Open your browser**
+   Navigate to `http://localhost:5173` to view the portfolio
+
+## 📜 Available Scripts
+
+- `yarn dev` - Start development server
+- `yarn build` - Build for production
+- `yarn preview` - Preview production build
+- `yarn lint` - Run ESLint
+
+## 🎨 Customization
+
+### Personal Information
+Update the following in `src/DevFolio.tsx`:
+- Name and title in the hero section
+- About section content
+- Services offered
+- Portfolio projects
+- Contact information
+
+### Styling
+- Modify `tailwind.config.js` for theme customization
+- Update `src/index.css` for global styles
+- Component styles are handled with Tailwind CSS classes
+
+### Contact Form
+Configure EmailJS in the `handleSubmit` function:
+```typescript
+// Update these with your EmailJS credentials
+const serviceId = 'your_service_id';
+const templateId = 'your_template_id';
+const publicKey = 'your_public_key';
 ```
+
+## 🚀 Deployment
+
+### Build for Production
+```bash
+yarn build
+```
+
+### Deploy to Vercel
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Deploy
+vercel
+```
+
+### Deploy to Netlify
+1. Build the project: `yarn build`
+2. Drag and drop the `dist` folder to Netlify
+3. Or connect your GitHub repository to Netlify
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit changes: `git commit -am 'Add new feature'`
+4. Push to branch: `git push origin feature/new-feature`
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Abhinav B M**
+- Software Development Engineer
+- [GitHub](https://github.com/AbhinavBM)
+- [LinkedIn](your-linkedin-url)
+- [Email](your-email@example.com)
+
+## 🙏 Acknowledgments
+
+- Built with [Vite](https://vitejs.dev/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Icons from [Lucide React](https://lucide.dev/)
+- Email functionality by [EmailJS](https://www.emailjs.com/)
+
+---
+
+⭐ Star this repository if you found it helpful!
