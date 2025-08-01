@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExperienceItem } from '../../types';
+import type { ExperienceItem } from '../../types';
 
 interface ExperienceCardProps {
   experience: ExperienceItem;

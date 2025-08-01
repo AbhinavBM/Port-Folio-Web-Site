@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactFormData, SubmitStatus } from '../../types';
+import type { ContactFormData, SubmitStatus } from '../../types';
 
 interface ContactFormProps {
   formData: ContactFormData;

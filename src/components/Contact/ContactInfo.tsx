@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactInfo as ContactInfoType } from '../../types';
+import type { ContactInfo as ContactInfoType } from '../../types';
 
 interface ContactInfoProps {
   contactInfo: ContactInfoType;

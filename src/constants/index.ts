@@ -1,4 +1,4 @@
-import { NavigationItem, ServiceItem, ExperienceItem, ProjectItem, ContactInfo } from '../types';
+import type { NavigationItem, ServiceItem, ExperienceItem, ProjectItem, ContactInfo } from '../types';
 
 // Navigation configuration
 export const NAVIGATION_ITEMS: NavigationItem[] = [

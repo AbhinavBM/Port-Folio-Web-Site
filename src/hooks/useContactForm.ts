@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ContactFormData, SubmitStatus } from '../types';
+import type { ContactFormData, SubmitStatus } from '../types';
 import { FORMSPREE_ENDPOINT, SUCCESS_MESSAGE_DURATION, ERROR_MESSAGE_DURATION } from '../constants';
 
 /**

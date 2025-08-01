@@ -1,5 +1,4 @@
 import React from 'react';
-import { useActiveSection } from '../hooks/useActiveSection';
 import Navigation from './Navigation/Navigation';
 import Hero from './Hero/Hero';
 import About from './About/About';
@@ -13,8 +12,6 @@ import Footer from './Footer/Footer';
  * with smaller, focused components and custom hooks
  */
 const DevFolio: React.FC = () => {
-  const { activeSection, scrollToSection } = useActiveSection();
-
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
