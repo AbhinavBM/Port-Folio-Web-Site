@@ -217,7 +217,7 @@ const DevFolio: React.FC = () => {
             </nav>
 
             <main>
-                <section id="home" className="min-h-screen px-6 pt-28">
+                <section id="home" className="min-h-screen bg-black px-6 pt-28">
                     <div className="mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-center gap-12 md:grid-cols-[1.15fr_0.85fr]">
                         <div>
                             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">
@@ -257,12 +257,11 @@ const DevFolio: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="relative mx-auto w-full max-w-sm md:max-w-md">
-                            <div className="absolute inset-4 rounded-2xl bg-cyan-300/20 blur-3xl" />
+                        <div className="relative mx-auto flex w-full max-w-sm justify-center md:max-w-md lg:max-w-lg">
                             <img
                                 src="https://i.imghippo.com/files/GVsZ2749Eg.jpeg"
                                 alt="Abhinav B M"
-                                className="relative aspect-[4/5] w-full rounded-xl border border-white/10 object-cover shadow-2xl"
+                                className="relative max-h-[52vh] w-auto object-contain md:max-h-[76vh] lg:max-h-[82vh]"
                             />
                         </div>
                     </div>
