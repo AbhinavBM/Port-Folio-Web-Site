@@ -42,7 +42,7 @@ const experiences = [
         date: 'Nov 2025 - Present',
         description:
             'Backend engineer building Kotlin/JVM microservices for e-commerce buyer applications, checkout, subscriptions, feedback, delivery-charge rule handling, and order-management systems handling millions of orders.',
-        tags: ['Kotlin', 'Java', 'Dropwizard', 'Spring Boot', 'GraphQL', 'Cosmos DB'],
+        tags: ['Kotlin', 'Dropwizard'],
         bullets: [
             'Shipped production backend changes across checkout, cart, order-form, order-service, constraints, preorder, and postorder services for high-impact commerce flows.',
             'Migrated checkout and cart fee calculation to typed, constraint-backed charge flows covering delivery, handling, platform, fuel surcharge, buyer cutoff, and subscription fee categories.',
