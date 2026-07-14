@@ -224,7 +224,7 @@ const DevFolio: React.FC = () => {
                                 Backend Software Engineer
                             </p>
                             <h1 className="max-w-4xl text-5xl font-bold leading-tight text-white md:text-7xl">
-                                Building production commerce systems.
+                                Building production e-commerce systems.
                             </h1>
                             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
                                 Software Development Engineer with production experience in buyer-facing e-commerce systems across checkout, cart,
