@@ -48,7 +48,7 @@ const experiences = [
             'Migrated checkout and cart fee calculation to typed, constraint-backed charge flows covering delivery, handling, platform, fuel surcharge, buyer cutoff, and subscription fee categories.',
             'Built subscription and membership benefit flows with display metadata, empty-cart benefit evaluation, fee handling, and downstream order/postorder propagation.',
             'Implemented logistics and free-shipping support with cart-level offers, progress nudges, dropslot-aware waivers, centralized caching, checkout persistence, and configurable rule management.',
-            'Participated in on-call debugging and production issue triage for checkout, delivery-charge, order, repayment, and service-integration issues with feature-flagged and canary rollouts.',
+            'Participated in on-call debugging and production issue triage for checkout, delivery-charge, order, and service-integration issues with feature-flagged and canary rollouts.',
         ],
     },
     {
@@ -56,13 +56,13 @@ const experiences = [
         company: 'Udaan.com',
         date: 'Jan 2025 - Sep 2025',
         description:
-            'Worked on backend pricing and delivery-charge systems for buyer-facing commerce flows and internal rule-management workflows.',
+            'Worked on backend delivery-charge systems for buyer-facing commerce flows and internal rule-management workflows.',
         tags: ['Kotlin', 'Dropwizard', 'GraphQL', 'Cosmos DB', 'React'],
         bullets: [
             'Implemented day/dropslot and order-level delivery charge algorithms with indexing and GraphQL-based data retrieval, reducing delivery charge escalations and improving buyer transparency.',
             'Designed a strategy-pattern-based rule engine with 11+ parallel calculators for category-specific Minimum Order Value and delivery charge calculations.',
             'Built backend APIs and Azure Cosmos DB operations for 500+ configurable delivery charge rules used by internal rule-management workflows.',
-            'Supported a React-based admin console with CRUD, CSV import/export, validation, staging, and feature-flag workflows for safer pricing rule releases.',
+            'Supported a React-based admin console with CRUD, CSV import/export, validation, staging, and feature-flag workflows for safer rule releases.',
         ],
     },
 ];
